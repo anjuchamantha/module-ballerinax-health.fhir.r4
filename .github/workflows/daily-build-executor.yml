@@ -12,10 +12,11 @@ on:
         type: string
 
 env:
-  BALLERINA_VERSION: 2201.12.2
+  BALLERINA_VERSION: latest
 
 jobs:
   build:
+    if: github.repository == 'ballerina-platform/module-ballerinax-health.fhir.r4'
     runs-on: ubuntu-latest
     env:
       JAVA_OPTS: -Xmx4G
